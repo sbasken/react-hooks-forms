@@ -8,6 +8,7 @@ function Form({
   handleLastNameChange, 
   handleNewsletterChange
  }) {
+  
   return (
     <form>
       <input type="text" onChange={handleFirstNameChange} value={firstName} />
