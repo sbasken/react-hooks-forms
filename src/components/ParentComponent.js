@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Form from "./Form";
+import DisplayData from "./DisplayData";
 
 function ParentComponent() {
     const [firstName, setFirstName] = useState("John");
@@ -22,14 +23,17 @@ function ParentComponent() {
     console.log(firstName, lastName, newsletter)
 
     return (
-        <Form 
-            firstName={firstName}
-            lastName={lastName}
-            newsletter={newsletter} 
-            handleFirstNameChange={handleFirstNameChange}
-            handleLastNameChange={handleLastNameChange}
-            handleNewsletterChange={handleNewsletterChange}
-        />
+        <div>
+            <Form 
+                firstName={firstName}
+                lastName={lastName}
+                newsletter={newsletter} 
+                handleFirstNameChange={handleFirstNameChange}
+                handleLastNameChange={handleLastNameChange}
+                handleNewsletterChange={handleNewsletterChange}
+            />
+            <DisplayData firstName={firstName} lastName={lastName} />
+        </div>
     )
 }
 
